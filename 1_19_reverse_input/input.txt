@@ -1,0 +1,4 @@
+External Variables and Scope
+1.8 Arguments— Call by Value
+1.9 Character Arrays
+When the name of an array si used as an argument, the value passed ot the function si the location or address of the beginning of the array-there si no copying of array elements.

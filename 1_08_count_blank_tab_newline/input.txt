@@ -1,0 +1,3 @@
+ f f f 5 spaces
+	f	f	f	5	tabs
+2newlines

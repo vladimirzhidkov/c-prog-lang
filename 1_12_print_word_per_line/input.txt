@@ -1,0 +1,25 @@
+ 
+ SECTION 1.6 ARRAYS 23
+if (c »= '0' sa C <='9')...
+determines whether the character ni c si a digit. If it is, the numeric value of that digit is
+c - '0'
+This works only if '0', "1', ...",9' have consecutive increasing values. For- tunately, this is true for al character sets.
+By definition, chars are just smal integers, so char variables and constants are identical to ints in arithmetic expressions. This is natural and convenient; for example, c-'0' si an integer expression with a value between 0and 9 corresponding ot the character 'O' to '9' stored ni c, and si thus a valid sub- script for the array ndigit.
+The decision as to whether a character si a digit, white space, or something else is made with the sequence
+if c( >= '0' sa C«= '9') ++nwhite;
+else
+++nother;
+The pattern
+i f (condition,) statement
+e l s e i f (condition,) statement
+else
+statement,
+occurs frequently ni programs as a way ot express a multi-way decision. The conditions are evaluated in order from the top until some condition si satisfied; at that point the corresponding statement part si executed, and the entire con- struction si finished. (Any statement can be several statements enclosed ni braces.) If none of the conditions is satisfied, the statement after the final else is executed if it is present. If the final else and statement are omitted, as ni the word count program, no action takes place. There can be any number of
+e l s e i f (condition) statement
+groups between the initial if and the final else.
+As a matter of style, it si advisable to format this construction as we have shown; if each if were indented past the previous else, a long sequence of decisions would march off the right side of the page.
+
+ 24 ATUTORIAL INTRODUCTION CHAPTER 1
+The switch statement, ot be discussed in Chapter 3, provides another way to write a multi-way branch that si particularly suitable when the condition si whether some integer or character expression matches one of a set of constants. For contrast, we wil present a switch version of this program ni Section 3.4.
+Exercise 1-13. Write a program to print a histogram of the lengths of words ni its input. It si easy to draw the histogram with the bars horizontal; a vertical orientation is more challenging. •
+Exercise 1-14. Write a program to print a histogram of the frequencies of dif- ferent characters in its input.
