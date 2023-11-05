@@ -4,10 +4,11 @@
 #define DEL		127
 #define SIZE	(DEL - SPACE)
 
-// prints a histogram of the frequencies of different characters in input.
+/* prints a histogram of the frequencies of different characters in input. */
 int main() {
 	int histogram[SIZE];
-	for (int i = 0; i < SIZE; ++i) {
+	int i;
+	for (i = 0; i < SIZE; ++i) {
 		histogram[i] = 0;
 	}
 
@@ -18,9 +19,10 @@ int main() {
 		}			
 	}
 
-	for (int i = SPACE; i < DEL; ++i) {
+	for (i = SPACE; i < DEL; ++i) {
 		printf("%c: ", i);
-		for (int j = 0; j < histogram[i - SPACE]; ++j) {
+		int j;
+		for (j = 0; j < histogram[i - SPACE]; ++j) {
 			putchar('*');
 		}
 		putchar('\n');	

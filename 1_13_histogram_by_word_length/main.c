@@ -7,23 +7,24 @@
 /* prints a histogram of the lengths of words in input */
 int main() {
 
-	// initialize histogram
+	/* initialize histogram */
 	int histogram[MAX_LENGTH + 1];
-	for (int i = 0; i <= MAX_LENGTH; ++i) {
+	int i;
+	for (i = 0; i <= MAX_LENGTH; ++i) {
 		histogram[i] = 0;
 	}
 
-	// count word lengths	
+	/* count word lengths */
 	int c;
 	int word_length = 0;
 	int state = OUT;
 	while ((c = getchar()) != EOF) {
-		// inside 
+		/* inside */
 		if (c != ' ' && c != '\n' && c != '\t') {
 			state = IN;
 			++word_length;
 		}
-		// transitioning from inside into outside
+		/* transitioning from inside into outside */
 		else if (state == IN) {
 			state = OUT;
 			if (word_length <= MAX_LENGTH) {
@@ -33,10 +34,11 @@ int main() {
 		} 
 	}	
 	
-	// print histogram
-	for (int i = MAX_LENGTH; i > 0; --i) {
+	/* print histogram */
+	for (i = MAX_LENGTH; i > 0; --i) {
 		printf("%2d: ", i);
-		for (int j = 0; j < histogram[i]; ++j) {
+		int j;
+		for (j = 0; j < histogram[i]; ++j) {
 			putchar('*');	
 		}
 		putchar('\n');

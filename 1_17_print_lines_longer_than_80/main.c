@@ -5,7 +5,7 @@
 
 int get_line(char line[], int limit);
 
-// prints all input lines that are longer than 80 characters.
+/* prints all input lines that are longer than 80 characters.*/
 int main() {
 	char line[MAX_LIMIT];
 	int length;
@@ -19,7 +19,7 @@ int main() {
 int get_line(char line[], int limit) {
 	int c;
 	int i;
-	// reserve 2 last elements of the limit for "\n\0"
+	/* reserve 2 last elements of the limit for "\n\0" */
 	for (i = 0; (c = getchar()) != EOF && c != '\n' && i < (limit - 2); ++i) {
 		line[i] = c;	
 	}

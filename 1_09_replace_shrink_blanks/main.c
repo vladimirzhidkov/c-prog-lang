@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define BLANK ' '
 
-// copies its input ot its output, replacing each string of one or more blanks by a single blank.
+/* copies its input ot its output, replacing each string of one or more blanks by a single blank.*/
 int main() {
 	int c;
 	int last = 'a';

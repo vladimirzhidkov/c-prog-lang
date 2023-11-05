@@ -5,7 +5,7 @@
 int get_line(char line[], int limit);
 void copy(char to[], char from[]);
 
-// print the longest input line
+/* print the longest input line */
 int main() {
 	char line[MAX_LENGTH];
 	char longest[MAX_LENGTH];

@@ -8,11 +8,11 @@ int main() {
 	int c;
 	int state = OUT;
 	while ((c = getchar()) != EOF) {
-		// inside word
+		/* inside word */
 		if (c != '\n' && c != '\t' && c != ' ') {
 			state = IN;
 			putchar(c);
-		// transitioning from INside into OUTside of the word
+		/* transitioning from INside into OUTside of the word */
 		} else if (state == IN) {
 			putchar('\n');
 			state = OUT;
