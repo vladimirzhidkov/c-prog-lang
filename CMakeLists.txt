@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 
-project("Exercises for \\\"The C programming language\\\" by Dennis Ritchie" VERSION 1.0)
+project(
+	"Exercises for \\\"The C programming language\\\" by Dennis Ritchie"
+	VERSION 1.0
+)
 
 configure_file("include/project_config.h.in" "include/project_config.h")
 include_directories("${PROJECT_BINARY_DIR}/include")
@@ -31,3 +34,7 @@ add_executable(1_19.out 1_19_reverse_input/main.c)
 #target_compile_options(1_19.out PRIVATE -v)
 #target_link_options(1_19.out PRIVATE -v)
 
+add_executable(1_20.out 1_20_detab/main.c)
+add_executable(1_21.out 1_21_entab/main.c)
+add_executable(1_22.out 1_22_fold/main.c)
+add_executable(1_23.out 1_23_remove_c_comments/main.c)

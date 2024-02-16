@@ -1,0 +1,15 @@
+		xor		ebx, ebx		; zero ebx
+		xor		ecx, ecx		; zero ecx
+lp:		mov		bl, [esi+ecx]	; another byte from the string
+		cmp		bl, 0			; is the string over?
+		je		lpquit			; end the loop if so
+		push	ebx				;
+		inc		ecx				; next index
+		jmp		lp				; repeat the loop
+lpquit: jecxz	done			; finish if the string is empty
+		mov		edi, esi		; point to the buffer's begin
+lp2:	pop		ebx				; get a char
+		mov		[edi], bl		; store the char
+		inc		edi				; next address
+		loop	lp2				; repeat ecx times
+done:
